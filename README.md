@@ -1,7 +1,7 @@
 Process Service Provider
 ========================
 
-[![Build Status](https://travis-ci.org/kherge/php-service-process.png?branch=master)](https://travis-ci.org/kherge/php-service-process)
+[![Build Status](https://travis-ci.org/herrera-io/php-service-process.png?branch=master)](https://travis-ci.org/herrera-io/php-service-process)
 
 A service provider for Symfony Process.
 
