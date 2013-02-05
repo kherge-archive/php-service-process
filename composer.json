@@ -1,0 +1,40 @@
+{
+    "name": "herrera-io/service-process",
+    "description": "A service provider for Symfony Process.",
+    "keywords": ["process", "service"],
+    "homepage": "https://herrera-io.github.com/php-service-process",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Kevin Herrera",
+            "email": "kevin@herrera.io",
+            "homepage": "http://kevin.herrera.io"
+        }
+    ],
+    "support": {
+        "issues": "https://github.com/herrera-io/php-service-process/issues"
+    },
+    "require": {
+        "php": ">=5.3.3",
+        "herrera-io/cli-app": "1.*",
+        "symfony/process": "2.1.*"
+    },
+    "require-dev": {
+        "herrera-io/phpunit-test-case": "1.*",
+        "phpunit/phpunit": "3.7.*"
+    },
+    "autoload": {
+        "psr-0": {
+            "Herrera\\Service\\Process": "src/lib"
+        }
+    },
+    "config": {
+        "bin-dir": "bin",
+        "vendor-dir": "src/vendors"
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "1.0-dev"
+        }
+    }
+}
