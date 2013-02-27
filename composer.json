@@ -16,7 +16,7 @@
     },
     "require": {
         "php": ">=5.3.3",
-        "herrera-io/cli-app": "1.*",
+        "herrera-io/service-container": "1.*",
         "symfony/process": ">=2.1,<2.3-dev"
     },
     "require-dev": {
