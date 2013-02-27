@@ -7,6 +7,30 @@ use Herrera\PHPUnit\TestCase;
 
 class ProcessTest extends TestCase
 {
+    public function testGlob()
+    {
+        $dir = getcwd();
+
+        $process = new Process('dir');
+
+        chdir($tmp = $this->createDir());
+
+        touch('a');
+        touch('a.php');
+        touch('b');
+        touch('b.php');
+
+        $process->glob('*.php');
+
+        $builder = $this->getPropertyValue($process, 'builder');
+        $args = $this->getPropertyValue($builder, 'arguments');
+
+        $this->assertNotContains('a', $args);
+        $this->assertContains('a.php', $args);
+        $this->assertNotContains('b', $args);
+        $this->assertContains('b.php', $args);
+    }
+
     public function testRun()
     {
         $output = '';

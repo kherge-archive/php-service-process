@@ -71,6 +71,20 @@ class Process
     }
 
     /**
+     * Expands the glob pattern and add the results as arguments.
+     *
+     * @param string $pattern The glob pattern.
+     *
+     * @return Process For method chaining.
+     */
+    public function glob($pattern)
+    {
+        foreach (glob($pattern) as $result) {
+            $this->builder->add($result);
+        }
+    }
+
+    /**
      * Sets the callback for output.
      *
      * @param callable $callback The callback.
