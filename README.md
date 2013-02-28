@@ -31,9 +31,9 @@ use Herrera\Service\Process\ProcessServiceProvider;
 $container = new Container();
 $container->register(new ProcessServiceProvider());
 
-$process = $container['process']('composer');
-$process->arg('hello')
-        ->arg('Guest')
+$process = $container['process']('echo');
+$process->arg('Hello, ')
+        ->arg('Guest!')
         ->output($process->stream(STDOUT))
         ->run();
 ```
