@@ -18,4 +18,15 @@ class ProcessServiceProviderTest extends TestCase
             $container['process']('test')
         );
     }
+
+    public function testRegisterNotSimple()
+    {
+        $container = new Container();
+        $container->register(new ProcessServiceProvider(false));
+
+        $this->assertInstanceOf(
+            'Symfony\\Component\\Process\\ProcessBuilder',
+            $container['process']('test')
+        );
+    }
 }
