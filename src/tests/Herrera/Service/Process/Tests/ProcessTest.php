@@ -7,6 +7,16 @@ use Herrera\PHPUnit\TestCase;
 
 class ProcessTest extends TestCase
 {
+    public function testBuilder()
+    {
+        $process = new Process('dir');
+
+        $this->assertInstanceOf(
+            'Symfony\\Component\\Process\\ProcessBuilder',
+            $process->builder()
+        );
+    }
+
     public function testGlob()
     {
         $process = new Process('dir');

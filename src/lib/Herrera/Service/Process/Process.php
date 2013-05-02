@@ -57,6 +57,16 @@ class Process
     }
 
     /**
+     * Returns the process builder.
+     *
+     * @return ProcessBuilder The process builder.
+     */
+    public function builder()
+    {
+        return $this->builder;
+    }
+
+    /**
      * Sets the callback for error output.
      *
      * @param callable $callback The callback.
