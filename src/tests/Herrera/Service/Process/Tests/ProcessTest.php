@@ -9,11 +9,7 @@ class ProcessTest extends TestCase
 {
     public function testGlob()
     {
-        $dir = getcwd();
-
         $process = new Process('dir');
-
-        chdir($tmp = $this->createDir());
 
         touch('a');
         touch('a.php');
@@ -36,9 +32,11 @@ class ProcessTest extends TestCase
         $output = '';
         $process = new Process('composer');
 
-        $process->arg('--version')->output(function ($buffer) use(&$output) {
-            $output .= $buffer;
-        });
+        $process->arg('--version')->output(
+            function ($buffer) use (&$output) {
+                $output .= $buffer;
+            }
+        );
 
         $this->assertSame(0, $process->run());
         $this->assertRegExp('/Composer version/', $output);
@@ -49,9 +47,11 @@ class ProcessTest extends TestCase
         $output = '';
         $process = new Process('composer');
 
-        $process->arg('test')->error(function ($buffer) use(&$output) {
-            $output .= $buffer;
-        });
+        $process->arg('test')->error(
+            function ($buffer) use (&$output) {
+                $output .= $buffer;
+            }
+        );
 
         $this->assertSame(1, $process->run());
         $this->assertRegExp('/Command "test" is not defined/', $output);

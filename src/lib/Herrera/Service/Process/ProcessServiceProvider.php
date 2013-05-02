@@ -17,8 +17,10 @@ class ProcessServiceProvider implements ProviderInterface
      */
     public function register(Container $container)
     {
-        $container['process'] = $container->many(function ($command) {
-            return new Process($command);
-        });
+        $container['process'] = $container->many(
+            function ($command) {
+                return new Process($command);
+            }
+        );
     }
 }

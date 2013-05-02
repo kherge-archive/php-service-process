@@ -5,7 +5,6 @@ namespace Herrera\Service\Process\Tests;
 use Herrera\PHPUnit\TestCase;
 use Herrera\Service\Container;
 use Herrera\Service\Process\ProcessServiceProvider;
-use Herrera\Service\ProviderInterface;
 
 class ProcessServiceProviderTest extends TestCase
 {
