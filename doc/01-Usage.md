@@ -5,13 +5,13 @@ Usage
     - [Simple Builder](#simple-builder)
     - [Regular Builder](#regular-builder)
 - [Process Building](#process-building)
-    - [arg()](#process-arg)
-    - [builder()](#process-builder)
-    - [error()](#process-error)
-    - [glob()](#process-glob)
-    - [output()](#process-output)
-    - [run()](#process-run)
-    - [stream()](#process-stream)
+    - [arg()](#process-argarg)
+    - [builder()](#processbuilder-builder)
+    - [error()](#process-errorstream)
+    - [glob()](#process-globpattern)
+    - [output()](#process-outputstream)
+    - [run()](#integer-run)
+    - [stream()](#callable-streamstream)
 
 Registration
 ------------
