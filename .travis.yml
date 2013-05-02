@@ -6,6 +6,6 @@ php:
 
 before_script:
     - composer self-update
-    - composer install --dev
+    - composer install --dev --no-interactive --prefer-source
 
 script: bin/phpunit
